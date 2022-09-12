@@ -1,5 +1,6 @@
 
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #042b54;">
+      
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #042b54;">
             <div class="container-fluid"><a routerlink="/home" routerlinkactive="active" class="nav-link text-black active" ng-reflect-router-link="/home" ng-reflect-router-link-active="active" href="/home">
                 <svg width="24" height="24" class="bi me-2">
                     <use xlink:href="./assets/bootstrap-icons.svg#search">
@@ -14,17 +15,19 @@
           }--><img src="./assets/Blue.PNG" alt="" width="30" height="10" class="d-inline-block align-text-top">
           <div id="navbarNav" class="collapse navbar-collapse">
             <ul class="navbar-nav"><li class="nav-item">
-                <a routerlink="/about" routerlinkactive="active" aria-current="page" class="nav-link active" style="font-family: Times New Roman; color: white; font-size: 20px;" ng-reflect-router-link="/about" ng-reflect-router-link-active="active" href="/about">Home</a>
+                <a routerlink="/home" routerlinkactive="active" aria-current="page" class="nav-link active" style="font-family: Times New Roman; color: white; font-size: 20px;" ng-reflect-router-link="/about" ng-reflect-router-link-active="active" href="/home">Home</a>
             </li>
             
             <li class="nav-item">
-                <a aria-current="page" class="nav-link active" style="font-family: Times New Roman; color: white; font-size: 20px;">Items</a>
+                <a ng-reflect-router-link="/items" ng-reflect-router-link-active="active" href="/items" aria-current="page" class="nav-link active" style="font-family: Times New Roman; color: white; font-size: 20px;">Items</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" style="font-family: Times New Roman; color: white; font-size: 20px;">Shopping List</a></li>
+                <a ng-reflect-router-link="/shopping-list" ng-reflect-router-link-active="active" href="/shopping-list" class="nav-link" style="font-family: Times New Roman; color: white; font-size: 20px;">Shopping List</a>
+              </li>
                 
-                <li class="nav-item"><a class="nav-link" style="font-family: Times New Roman; color: white; font-size: 20px;">My Recipes </a></li></ul></div>
+                <li class="nav-item">
+                  <a ng-reflect-router-link="/recipes" ng-reflect-router-link-active="active" href="/recipes" class="nav-link" style="font-family: Times New Roman; color: white; font-size: 20px;">My Recipes </a></li></ul></div>
                 
                 
                 
@@ -32,22 +35,6 @@
             "ng-reflect-ng-if": "true"
           }--><!--bindings={
             "ng-reflect-ng-if": null
-          }--></div></nav>
-          <div>
-            
-            <div class="row  bg-secondary   g-3">
-                <div class="col mt-3">
-                 <h2 >CSEE481-Group6</h2>
-                 <h2 >Smart Fridge Project</h2>
-                </div>
-                <div class="col mb-3 mt-3 ms-3">
-                    <img   _ngcontent-yug-c25="" src="./assets/ExternalPrototype.png" alt="" width="99%" height="500" class="banner__bg">
-                </div>
-              </div>
-            
-            
-       
-        </div>
-
-        <button type="button" class="btn btn-outline-dark">Dark</button>
-         
+          }--></div>
+        </nav>
+        <div>
