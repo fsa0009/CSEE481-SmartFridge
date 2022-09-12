@@ -11,6 +11,7 @@ import { ItemsListComponent } from './Items-List/Items.component';
 import { RecipesComponent } from './Recipes/Recipes.component';
 import { ShoppingListComponent } from './Shopping-List/Shopping-List.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AboutProjectComponent } from './About/AboutProject.component';
 
 
 
@@ -24,7 +25,9 @@ import { AppRoutingModule } from './app-routing.module';
     BottomNavBarComponent,
     ShoppingListComponent,
     ItemsListComponent,
-    RecipesComponent
+    RecipesComponent,
+    AboutProjectComponent
+
 
   ],
   imports: [

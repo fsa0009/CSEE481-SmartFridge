@@ -6,13 +6,16 @@ import { LayoutComponent } from './Home-Page/Layout.component';
 import { ShoppingListComponent } from './Shopping-List/Shopping-List.component';
 import { RecipesComponent } from './Recipes/Recipes.component';
 import { BodyComponent } from './Home-Page/Body.component';
+import { AboutProjectComponent } from './About/AboutProject.component';
 
 
 const routes: Routes = [
   {path:'home' , component: BodyComponent},
   {path:'items' , component: ItemsListComponent},
   {path:'shopping-list' , component: ShoppingListComponent},
-  {path:'recipes' , component: RecipesComponent}
+  {path:'recipes' , component: RecipesComponent},
+  {path:'aboutproject' , component: AboutProjectComponent}
+
 ];
 
 @NgModule({
