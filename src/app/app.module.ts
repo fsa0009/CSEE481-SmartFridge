@@ -12,8 +12,8 @@ import { RecipesComponent } from './Recipes/Recipes.component';
 import { ShoppingListComponent } from './Shopping-List/Shopping-List.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutProjectComponent } from './About/AboutProject.component';
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { MyInfoComponent } from './my-info.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +27,17 @@ import { AboutProjectComponent } from './About/AboutProject.component';
     ItemsListComponent,
     RecipesComponent,
     AboutProjectComponent,
-    LoginComponent
+    LoginComponent,
+    MyInfoComponent
 
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+  
+
   ],
   providers: [],
   bootstrap: [AppComponent]
