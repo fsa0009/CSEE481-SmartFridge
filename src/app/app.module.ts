@@ -26,7 +26,8 @@ import { AboutProjectComponent } from './About/AboutProject.component';
     ShoppingListComponent,
     ItemsListComponent,
     RecipesComponent,
-    AboutProjectComponent
+    AboutProjectComponent,
+    LoginComponent
 
 
   ],
