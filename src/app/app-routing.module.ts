@@ -17,6 +17,7 @@ const routes: Routes = [
   {path:'recipes' , component: RecipesComponent},
   {path:'aboutproject' , component: AboutProjectComponent},
   {path:'login' , component: LoginComponent},
+  {path:'' , component: LoginComponent}
 
 ];
 
