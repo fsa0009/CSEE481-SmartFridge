@@ -1,57 +1,70 @@
-<div class="container ms-4 mt-4">
-<table class="tabletable-striped table table-hover">
-    <thead>
+<div class="bg-dark mb-0" >
+<div class="container justify-content-center"  >
+<div class="container " >
+<table Id = "table-hover"class="tabletable-striped table table-hover background-color-primary text-white">
+    <thead >
       <tr> 
+        <th scope="col"></th>
         <th scope="col">#</th>
         <th scope="col">Name</th>
-        <th scope="col">Type</th>
+        <th scope="col">Brand</th>
         <th scope="col">Expiration Date</th>
         <th scope="col">Remaining %</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Rice</td>
-        <td>Food</td>
-        <td>12/10/2022</td>
-        <td><span class="badge bg-success rounded-pill">100%</span></td>
+      <tr *ngIf="pantryItemOne != undefined">
+        <th scope="row"></th>
+        <td>{{pantryItemOne.GridLocation}}</td>
+        <td>{{pantryItemOne.Name}}</td>
+        <td>{{pantryItemOne.ItemBrand}}</td>
+        <td>{{pantryItemOne.ExpirationDate}}</td>
+        <td><span class="badge bg-success rounded-pill">{{pantryItemOne.RemainingAmount}}</span></td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Milk</td>
-        <td>Drink</td>
-        <td>12/10/2022</td>
-        <td><span class="badge bg-success rounded-pill">90%</span></td>
+      <tr *ngIf="pantryItemTwo != undefined">
+        <th scope="row"></th>
+        <td>{{pantryItemTwo.GridLocation}}</td>
+        <td>{{pantryItemTwo.Name}}</td>
+        <td>{{pantryItemTwo.ItemBrand}}</td>
+        <td>{{pantryItemTwo.ExpirationDate}}</td>
+        <td><span class="badge bg-success rounded-pill">{{pantryItemTwo.RemainingAmount}}</span></td>
       </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Pasta</td>
-        <td>Food</td>
-        <td>12/10/2022</td>
-        <td><span class="badge bg-success rounded-pill">80%</span></td>
+      <tr *ngIf="pantryItemThree != undefined">
+        <th scope="row"></th>
+        <td>{{pantryItemThree.GridLocation}}</td>
+        <td>{{pantryItemThree.Name}}</td>
+        <td>{{pantryItemThree.ItemBrand}}</td>
+        <td>{{pantryItemThree.ExpirationDate}}</td>
+        <td><span class="badge bg-success rounded-pill">{{pantryItemThree.RemainingAmount}}</span></td>
       </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Orange Juice</td>
-        <td>Drink</td>
-        <td><span style = "color: rgb(236, 5, 5);" >08/31/2022</span></td>
-        <td><span class="badge bg-warning rounded-pill">40%</span></td>
+      <tr *ngIf="pantryItemFour != undefined">
+        <th scope="row"></th>
+        <td>{{pantryItemFour.GridLocation}}</td>
+        <td>{{pantryItemFour.Name}}</td>
+        <td>{{pantryItemFour.ItemBrand}}</td>
+        <td><span style = "color: rgb(236, 5, 5);" >{{pantryItemFour.ExpirationDate}}</span></td>
+        <td><span class="badge bg-warning rounded-pill">{{pantryItemFour.RemainingAmount}}</span></td>
       </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td>Potato</td>
-        <td>Food</td>
-        <td>12/10/2022</td>
-        <td><span class="badge bg-warning rounded-pill">30%</span></td>
+      <tr *ngIf="pantryItemFive != undefined">
+        <th scope="row"></th>
+        <td>{{pantryItemFive.GridLocation}}</td>
+        <td>{{pantryItemFive.Name}}</td>
+        <td>{{pantryItemFive.ItemBrand}}</td>
+        <td>{{pantryItemFive.ExpirationDate}}</td>
+        <td><span class="badge bg-warning rounded-pill">{{pantryItemFive.RemainingAmount}}</span></td>
       </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Tomato</td>
-        <td>Food</td>
-        <td>12/10/2022</td>
-        <td><span class="badge bg-danger rounded-pill">10%</span></td>
+      <tr *ngIf="pantryItemSix != undefined">
+        <th scope="row"></th>
+        <td>{{pantryItemSix.GridLocation}}</td>
+        <td>{{pantryItemSix.Name}}</td>
+        <td>{{pantryItemSix.ItemBrand}}</td>
+        <td>{{pantryItemSix.ExpirationDate}}</td>
+        <td><span class="badge bg-danger rounded-pill">{{pantryItemSix.RemainingAmount}}</span></td>
       </tr>
     </tbody>
   </table>
 </div>
+</div>
+
+</div>
+
