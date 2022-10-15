@@ -2,7 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Injectable } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { Subject, tap } from 'rxjs';
 import { LoginResponse } from './LoginResponse';
+import { User } from './User.model';
 
 @Injectable({
     providedIn: 'root'
@@ -17,7 +19,9 @@ export class LoginService {
     baseURL: string = "https://identitytoolkit.googleapis.com/v1/accounts" ;
     signUpEndPoint: string = "signUp";
 
-    signInEndPoint:string = "signInWithPassword"
+    signInEndPoint:string = "signInWithPassword"; 
+
+    public user:Subject<User> = new Subject<User>() ; 
 
     public constructor(private http: HttpClient){
 
@@ -44,7 +48,18 @@ export class LoginService {
         "returnSecureToken" : true 
     };
 
-    return this.http.post<LoginResponse>(this.baseURL + ':' + this.signInEndPoint + '?' + 'key=' + this.API_KEY , requestBody ) ; 
+    return this.http.post<LoginResponse>(this.baseURL + ':' + this.signInEndPoint + '?' + 'key=' +
+    this.API_KEY , requestBody ).pipe(
+        tap(
+            (data:LoginResponse) =>{
+                const currentTime = new Date().getTime(); 
+                const expirationDate = new Date(currentTime + +data.expiresIn * 1000) ; 
+                const user = new User(data.email , data.localId, data.idToken, expirationDate);
+                this.user.next(user);
+                console.log(user); 
+            }
+        )
+    ) ; 
 
 
   }
