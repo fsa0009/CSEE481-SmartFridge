@@ -7,7 +7,7 @@ import { ShoppingListComponent } from './Shopping-List/Shopping-List.component';
 import { RecipesComponent } from './Recipes/Recipes.component';
 import { BodyComponent } from './Home-Page/Body.component';
 import { AboutProjectComponent } from './About/AboutProject.component';
-import { LoginComponent } from './Home-Page/Login.component';
+import { LoginComponent } from './Login/Login.component';
 
 
 const routes: Routes = [

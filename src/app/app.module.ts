@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BodyComponent } from './Home-Page/Body.component';
 import { BottomNavBarComponent } from './Home-Page/Bottom-NavBar.component';
 import { LayoutComponent } from './Home-Page/Layout.component';
-import { LoginComponent } from './Home-Page/Login.component';
+import { LoginComponent } from './Login/Login.component';
 import { TopNavBarComponent } from './Home-Page/Top-NavBar.component';
 import { ItemsListComponent } from './Items-List/Items.component';
 import { RecipesComponent } from './Recipes/Recipes.component';
@@ -14,6 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AboutProjectComponent } from './About/AboutProject.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MyInfoComponent } from './my-info.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -28,14 +30,18 @@ import { MyInfoComponent } from './my-info.component';
     RecipesComponent,
     AboutProjectComponent,
     LoginComponent,
-    MyInfoComponent
+    MyInfoComponent,
+  
+   
+    
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   
 
   ],

@@ -14,7 +14,7 @@
                 <div class="col-sm-9 p-4 text-white rounded background-image bg-dark" style="background-color:#042b54; max-width: 600px;">
                     <h3 class="mb-4">Sign in</h3>
         
-                    <form  >
+                    <form #loginForm="ngForm"    >
                         <div class="form-floating text-black fw-light my-3">
                             <input type="text" class="form-control" placeholder="Email" ngModel name="email" required email>
                             <label for="floatingTextarea"><em class="bi bi-envelope"></em> Email/Username</label>
@@ -27,9 +27,16 @@
         
                         <div class="row text-black my-4 px-3 justify-content-center">
                             <div class="col-6">
-                                <button type="button submit" class="btn btn-warning w-100 h-100" >Sign In</button>
+                                <button type=" submit" (click)="onSignInSubmit(loginForm) "  class="btn btn-outline-warning w-100 h-100" [disabled]="!loginForm.valid" >Sign In</button>
                             </div>
                         </div>
+                        <div class="row text-black my-4 px-3 justify-content-center">
+                            <div class="col-6">
+                                <button type=" submit" (click)="onSignUpSubmit(loginForm) " class="btn btn-outline-warning w-100 h-100" [disabled]="!loginForm.valid" >Sign Up</button>
+                            </div>
+                        </div>
+
+
                     </form>
         
                 
